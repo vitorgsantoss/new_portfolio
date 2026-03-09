@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import type { ContactFormData } from '../../types';
 import { personalInfo } from '../../data/personal';
 import './Contact.css';
@@ -36,11 +37,27 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     if (!validate()) return;
     setStatus('sending');
-    // Simulate async email send (replace with EmailJS or similar)
-    setTimeout(() => {
-      setStatus('success');
-      setForm(initialForm);
-    }, 1500);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+          to_email: 'vgsantos.dev@gmail.com',
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(() => {
+        setStatus('success');
+        setForm(initialForm);
+      })
+      .catch(() => {
+        setStatus('error');
+      });
   };
 
   return (
@@ -125,6 +142,11 @@ export const Contact: React.FC = () => {
               </div>
             ) : (
               <form className="contact__form" onSubmit={handleSubmit} noValidate>
+                {status === 'error' && (
+                  <div className="contact__send-error" role="alert">
+                    ❌ Falha ao enviar. Tente novamente ou entre em contato diretamente por e-mail.
+                  </div>
+                )}
                 <div className="contact__field">
                   <label htmlFor="contact-name" className="contact__label">
                     Nome
@@ -200,7 +222,7 @@ export const Contact: React.FC = () => {
                   <textarea
                     id="contact-message"
                     name="message"
-                    rows={5}
+                    rows={3}
                     className={`contact__textarea${errors.message ? ' contact__input--error' : ''}`}
                     placeholder="Escreva sua mensagem..."
                     value={form.message}

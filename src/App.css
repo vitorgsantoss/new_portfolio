@@ -1,3 +1,20 @@
+.contact-footer-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-footer-wrapper .contact {
+  flex: 1;
+  min-height: unset;
+  padding: 3rem 0 2rem;
+  justify-content: center;
+}
+
+.contact-footer-wrapper .section__header {
+  margin-bottom: 2rem;
+}
+
 /* Section shared layout */
 .section {
   min-height: 100vh;

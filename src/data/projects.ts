@@ -37,33 +37,29 @@ export const projects: Project[] = [
     // demoUrl: 'https://ecommerce-bitter-snowflake-9171.fly.dev/',
     repoUrl: 'https://github.com/vitorgsantoss/e-commerce',
     featured: true,
-  },
+},
   
   
-  {
+{
     id: '4',
-    title: 'Blog Tech',
+    title: 'AI Teacher Bot',
     description:
-      'Aplicação web que utiliza o framework Django para gerenciamento de dados e Docker para containerização. Permite o cadastro e gerenciamento de posts, explorando roteamento, ORM, autenticação e templates do Django.',
-    technologies: ['Django', 'Python', 'Docker', 'PostgreSQL'],
+    'Bot de WhatsApp integrado com a API da OpenAI para ajudar usuários a aprender e praticar inglês de forma interativa. Oferece tradução, explicação de frases, exemplos de uso real e testes de fixação baseados no histórico da conversa.',
+    technologies: ['Python', 'FastAPI', 'OpenAI', 'PostgreSQL', 'Redis', 'Docker'],
     gradientFrom: '#10b981',
     gradientTo: '#059669',
-    imageUrl: '/img/blog.png',
-    // demoUrl: 'https://blog-project-cool-sea-1718.fly.dev/',
-    repoUrl: 'https://github.com/vitorgsantoss/blog-project',
+    imageUrl: '/img/english_teacher.png',
+    repoUrl: 'https://github.com/vitorgsantoss/whatsapp_ai_teacher',
     featured: false,
   },
   {
     id: '5',
-    title: 'Agenda',
+    title: 'iSystems - PDV',
     description:
-      'Aplicação para gerenciamento de contatos com operações de CRUD, interface intuitiva, gerenciamento de usuários e sistema de autenticação robusto.',
-    technologies: ['Django', 'Python', 'PostgreSQL', 'HTML5', 'CSS3'],
+      'SaaS multi-tenant de PDV completo para bares e lanchonetes. Controla o comércio de ponta a ponta: gestão de estoque, registro de vendas, cardápio online e acompanhamento de pedidos em tempo real — tanto para funcionários quanto para clientes.',
+    technologies: ['React', 'TypeScript', 'Django REST Framework', 'Celery', 'RabbitMQ', 'PostgreSQL', 'Docker'],
     gradientFrom: '#8b5cf6',
     gradientTo: '#7c3aed',
-    imageUrl: '/img/agenda.png',
-    // demoUrl: 'https://agenda-floral-voice-9073.fly.dev/',
-    repoUrl: 'https://github.com/vitorgsantoss/agenda-project',
     featured: false,
   },
   {

@@ -4,6 +4,7 @@ import { Hero } from './components/sections/Hero';
 import { Projects } from './components/sections/Projects';
 import { Career } from './components/sections/Career';
 import { Skills } from './components/sections/Skills';
+import { Services } from './components/sections/Services';
 import { Contact } from './components/sections/Contact';
 import './App.css';
 
@@ -16,9 +17,12 @@ function App() {
         <Projects />
         <Career />
         <Skills />
-        <Contact />
+        <Services />
+        <div className="contact-footer-wrapper">
+          <Contact />
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </>
   );
 }
