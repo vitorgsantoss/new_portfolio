@@ -1,0 +1,49 @@
+/* Section shared layout */
+.section {
+  min-height: 100vh;
+  padding: var(--section-padding) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section--alt {
+  background-color: var(--color-bg-secondary);
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+}
+
+.section__title {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
