@@ -69,21 +69,16 @@
   overflow: hidden;
 }
 
-.project-card__image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.15);
+.project-card__image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.project-card__image-label {
-  position: relative;
-  z-index: 1;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.02em;
+.project-card:hover .project-card__image-img {
+  transform: scale(1.05);
 }
 
 .project-card__body {

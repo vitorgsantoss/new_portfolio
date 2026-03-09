@@ -5,6 +5,7 @@ export interface Project {
   technologies: string[];
   gradientFrom: string;
   gradientTo: string;
+  imageUrl?: string;
   demoUrl?: string;
   repoUrl?: string;
   featured: boolean;

@@ -52,12 +52,21 @@ export const Projects: React.FC = () => {
             <article key={project.id} className="project-card">
               <div
                 className="project-card__image"
-                style={{
+                style={!project.imageUrl ? {
                   background: `linear-gradient(135deg, ${project.gradientFrom}, ${project.gradientTo})`,
-                }}
+                } : undefined}
                 aria-hidden="true"
               >
-                <span className="project-card__image-label">{project.title}</span>
+                {project.imageUrl ? (
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="project-card__image-img"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="project-card__image-label">{project.title}</span>
+                )}
               </div>
 
               <div className="project-card__body">

@@ -25,8 +25,8 @@ export const Hero: React.FC = () => {
               Ver Projetos
             </a>
             <a
-              href="/curriculum-vitae.pdf"
-              download="Alex-Morgan-CV.pdf"
+              href={personalInfo.resume}
+              download="Vítor Santos-CV.pdf"
               className="hero__btn hero__btn--secondary"
               aria-label="Baixar currículo"
             >
@@ -69,12 +69,15 @@ export const Hero: React.FC = () => {
               <span className="hero__code-filename">developer.ts</span>
             </div>
             <pre className="hero__code-body"><code>{`const developer = {
-  name: "Alex Morgan",
-  role: "Full Stack Dev",
+  name: "Vítor Santos",
+  role: "Fullstack Dev",
   stack: [
+    "Python", "Langchain",
+    "FastAPI", "Django",
+    "Celery", "RabbitMQ",
     "React", "TypeScript",
     "Node.js", "PostgreSQL",
-    "Docker", "AWS",
+    "Docker", "GCP"
   ],
   available: true,
 };`}</code></pre>
