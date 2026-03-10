@@ -267,7 +267,7 @@
   }
 
   .hero__visual {
-    order: -1;
+    order: 1;
   }
 
   .hero__code-body {

@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'RAG Chat',
     description:
       'Através do RAG Chat você pode realizar o upload de documentos e fazer perguntas para o agente de IA com base no conteúdo. O acesso às informações se torna muito mais prático — deixa a inteligência artificial fazer o trabalho duro por você.',
-    technologies: ['Python', 'LangChain', 'OpenAI', 'RAG', 'ChromaDB', 'FastAPI'],
+    technologies: ['Python', 'LangChain', 'OpenAI', 'RAG', 'ChromaDB', 'Streamlit'],
     gradientFrom: '#6366f1',
     gradientTo: '#4f46e5',
     imageUrl: '/img/rag_chat.png',
@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: 'Agente de Estoque',
     description:
       'Agente de IA que permite acessar registros do banco de dados através de linguagem natural. Criado com LangChain e ferramentas SQL, Streamlit para a interface e a API da OpenAI para processar as requisições.',
-    technologies: ['Python', 'LangChain', 'Streamlit', 'OpenAI', 'SQL', 'PostgreSQL'],
+    technologies: ['Python', 'LangChain', 'Streamlit', 'OpenAI'],
     gradientFrom: '#f59e0b',
     gradientTo: '#d97706',
     imageUrl: '/img/stock_agent.png',

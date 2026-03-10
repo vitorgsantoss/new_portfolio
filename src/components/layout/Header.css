@@ -179,7 +179,7 @@
       opacity var(--transition-base),
       visibility var(--transition-base),
       transform var(--transition-base);
-    z-index: -1;
+    z-index: 99;
   }
 
   .header__nav--open {

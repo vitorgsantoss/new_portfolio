@@ -32,6 +32,18 @@
   --transition-base: 250ms ease;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 2.5rem;
+  }
+}
+
 /* ─── Light Mode Tokens ─────────────────────────────────── */
 [data-theme='light'] {
   --color-bg: #f8f9fc;

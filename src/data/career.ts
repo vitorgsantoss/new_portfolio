@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
   {
     id: '2',
     company: 'Ford Motor Company - IEL',
-    role: 'Desenvolvedor Fullstack - Bolsista Pesquisador',
+    role: 'Desenvolvedor Fullstack',
     period: { start: 'Mai / 2025', end: 'Nov / 2025' },
     description:
       'Desenvolvimento de aplicações web completas com Django e PostgreSQL, explorando todas as camadas do desenvolvimento: backend, banco de dados, autenticação e frontend.',
