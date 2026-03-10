@@ -248,10 +248,24 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 200vh;
+    padding: 0;
+  }
+
   .hero__container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    grid-template-rows: 100vh 100vh;
+    gap: 0;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
     text-align: center;
+  }
+
+  .hero__content {
+    padding: 5rem 1.5rem 2rem;
+    justify-content: center;
   }
 
   .hero__bio {
@@ -268,10 +282,22 @@
 
   .hero__visual {
     order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero__code-card {
+    width: 100%;
   }
 
   .hero__code-body {
     font-size: 0.8125rem;
+  }
+
+  .hero__scroll-hint {
+    display: none;
   }
 }
 
