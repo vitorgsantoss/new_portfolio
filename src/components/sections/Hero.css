@@ -197,7 +197,7 @@
   font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
   font-size: 0.875rem;
   line-height: 1.75;
-  color: #a5b4fc;
+  color: var(--color-violet);
   overflow-x: auto;
 }
 

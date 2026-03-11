@@ -146,7 +146,7 @@
   font-weight: 500;
   padding: 0.2rem 0.6rem;
   background-color: rgba(99, 102, 241, 0.12);
-  color: #a5b4fc;
+  color: var(--color-violet);
   border-radius: var(--radius-full);
 }
 
@@ -169,7 +169,7 @@
 }
 
 .project-card__link--demo:hover {
-  color: #a5b4fc;
+  color: var(--color-violet);
 }
 
 .project-card__link--repo {
@@ -230,6 +230,6 @@
   }
 
   .project-card__details-btn:hover {
-    color: #a5b4fc;
+    color: var(--color-violet);
   }
 }

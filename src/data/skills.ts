@@ -17,13 +17,13 @@ export const skillCategories: SkillCategory[] = [
     id: 'frontend',
     name: 'Frontend',
     icon: '🎨',
-    skills: ['React', 'TypeScript', 'JavaScript', 'Vite', 'HTML5', 'CSS3', 'Streamlit', 'Django Templates'],
+    skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite', 'HTML5', 'CSS3', 'Streamlit', 'Django Templates'],
   },
   {
     id: 'databases',
     name: 'Banco de Dados',
     icon: '🗄️',
-    skills: ['PostgreSQL', 'SQLite', 'ORM', 'Sqlalchemy', 'SQL'],
+    skills: ['PostgreSQL', 'Redis', 'MongoDB', 'SQLite', 'ORM', 'Sqlalchemy', 'SQL'],
   },
   {
     id: 'devops',
