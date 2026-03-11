@@ -1,8 +1,10 @@
 import './Footer.css';
 import { personalInfo } from '../../data/personal';
+import { useTranslation } from '../../hooks/useTranslation';
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="footer">
@@ -16,7 +18,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
-            aria-label="GitHub de Vítor Santos"
+            aria-label={t('footer.github')}
           >
             GitHub
           </a>
@@ -25,7 +27,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="footer__link"
-            aria-label="LinkedIn de Vítor Santos"
+            aria-label={t('footer.linkedin')}
           >
             LinkedIn
           </a>

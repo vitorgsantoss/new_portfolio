@@ -1,20 +1,23 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../hooks/useTheme';
+import { useTranslation } from '../../hooks/useTranslation';
 import './Header.css';
 import { personalInfo } from '../../data/personal';
 
-const navLinks = [
-  { label: 'Projetos', href: '#projects' },
-  { label: 'Carreira', href: '#career' },
-  { label: 'Habilidades', href: '#skills' },
-  { label: 'Serviços', href: '#services' },
-  { label: 'Contato', href: '#contact' },
+const getNavLinks = (t: (key: string) => string) => [
+  { label: t('nav.projects'), href: '#projects' },
+  { label: t('nav.career'), href: '#career' },
+  { label: t('nav.skills'), href: '#skills' },
+  { label: t('nav.services'), href: '#services' },
+  { label: t('nav.contact'), href: '#contact' },
 ];
 
 export const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, toggle } = useTheme();
+  const { theme, toggle: toggleTheme } = useTheme();
+  const { language, toggle: toggleLanguage, t } = useTranslation();
+  const navLinks = getNavLinks(t);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -36,7 +39,7 @@ export const Header: React.FC = () => {
           href="#hero"
           className="header__logo"
           onClick={(e) => handleNavClick(e, '#hero')}
-          aria-label="Ir para o início"
+          aria-label={t('nav.goToStart')}
         >
           <span className="header__logo-accent">Vgsantos.</span>dev
         </a>
@@ -60,16 +63,25 @@ export const Header: React.FC = () => {
             href={personalInfo.resume}
             download="Vitor Santos-CV.pdf"
             className="header__cta"
-            aria-label="Baixar currículo em PDF"
+            aria-label={t('nav.downloadCV')}
           >
-            Download CV
+            {t('nav.downloadCV')}
           </a>
 
           <button
+            className="header__lang-toggle"
+            onClick={toggleLanguage}
+            aria-label={language === 'pt-BR' ? t('language.switchToEnUs') : t('language.switchToPtBr')}
+            title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
+          >
+            <span className="header__lang-text">{language === 'pt-BR' ? 'PT' : 'EN'}</span>
+          </button>
+
+          <button
             className="header__theme-toggle"
-            onClick={toggle}
-            aria-label={theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'}
-            title={theme === 'dark' ? 'Modo claro' : 'Modo escuro'}
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? t('theme.lightMode') : t('theme.darkMode')}
+            title={theme === 'dark' ? t('theme.lightMode') : t('theme.darkMode')}
           >
             {theme === 'dark' ? (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -94,7 +106,7 @@ export const Header: React.FC = () => {
         <button
           className={`header__hamburger${menuOpen ? ' header__hamburger--open' : ''}`}
           onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
           aria-expanded={menuOpen}
           aria-controls="main-nav"
         >

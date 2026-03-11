@@ -1,21 +1,25 @@
-import { experiences } from '../../data/career';
+import { getExperiences } from '../../data/career';
+import { useTranslation } from '../../hooks/useTranslation';
 import './Career.css';
 
 export const Career: React.FC = () => {
+  const { t, language } = useTranslation();
+  const experiences = getExperiences(language);
+
   return (
     <section id="career" className="career section section--alt" aria-labelledby="career-title">
       <div className="section__container">
         <div className="section__header">
-          <p className="section__label">Experiência</p>
+          <p className="section__label">{t('career.label')}</p>
           <h2 id="career-title" className="section__title">
-            Carreira
+            {t('career.title')}
           </h2>
           <p className="section__subtitle">
-            Minha trajetória profissional desenvolvendo produtos digitais de impacto.
+            {t('career.subtitle')}
           </p>
         </div>
 
-        <ol className="timeline" aria-label="Linha do tempo da carreira">
+        <ol className="timeline" aria-label={t('career.timeline')}>
           {experiences.map((exp, index) => (
             <li key={exp.id} className={`timeline__item${index % 2 === 0 ? ' timeline__item--left' : ' timeline__item--right'}`}>
               <div className="timeline__connector">
@@ -38,7 +42,7 @@ export const Career: React.FC = () => {
 
                 <p className="timeline__description">{exp.description}</p>
 
-                <ul className="timeline__responsibilities" aria-label="Responsabilidades">
+                <ul className="timeline__responsibilities" aria-label={t('career.responsibilities')}>
                   {exp.responsibilities.map((r) => (
                     <li key={r} className="timeline__responsibility">
                       {r}
@@ -46,7 +50,7 @@ export const Career: React.FC = () => {
                   ))}
                 </ul>
 
-                <ul className="timeline__techs" aria-label="Tecnologias">
+                <ul className="timeline__techs" aria-label={t('career.technologies')}>
                   {exp.technologies.map((tech) => (
                     <li key={tech} className="timeline__tech">
                       {tech}

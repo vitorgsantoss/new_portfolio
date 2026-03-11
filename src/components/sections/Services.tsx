@@ -1,73 +1,70 @@
+import { useTranslation } from '../../hooks/useTranslation';
+import type { TranslationKey } from '../../data/translations';
 import './Services.css';
 
 interface Service {
   icon: string;
-  title: string;
-  description: string;
+  titleKey: TranslationKey;
+  descriptionKey: TranslationKey;
 }
 
 const services: Service[] = [
   {
     icon: '🤖',
-    title: 'Sistemas de RAG',
-    description:
-      'Criação de agentes de IA com Retrieval-Augmented Generation: faça perguntas sobre seus documentos, bases de conhecimento ou dados internos com respostas precisas e contextualizadas.',
+    titleKey: 'services.rag.title',
+    descriptionKey: 'services.rag.description',
   },
   {
     icon: '🔗',
-    title: 'Integração de IA em Sistemas',
-    description:
-      'Integro modelos de linguagem (GPT, LLaMA, etc.) em sistemas existentes: chatbots, automação de processos, análise de dados e qualquer fluxo que possa se beneficiar de inteligência artificial.',
+    titleKey: 'services.aiIntegration.title',
+    descriptionKey: 'services.aiIntegration.description',
   },
   {
     icon: '⚡',
-    title: 'Criação de APIs',
-    description:
-      'Desenvolvimento de APIs RESTful robustas e escaláveis com FastAPI ou Django REST Framework, desde microsserviços até backends completos com autenticação, documentação e testes.',
+    titleKey: 'services.api.title',
+    descriptionKey: 'services.api.description',
   },
   {
     icon: '🌐',
-    title: 'Criação de Sites',
-    description:
-      'Sites modernos, responsivos e otimizados para SEO, com foco em desempenho e experiência do usuário. Do portfólio ao site institucional, sempre com as melhores tecnologias.',
+    titleKey: 'services.websites.title',
+    descriptionKey: 'services.websites.description',
   },
   {
     icon: '🛒',
-    title: 'E-commerces',
-    description:
-      'Plataformas de e-commerce completas com controle de estoque, catálogo de produtos, gestão de pedidos e integração com meios de pagamento — tudo centralizado e fácil de gerenciar.',
+    titleKey: 'services.ecommerce.title',
+    descriptionKey: 'services.ecommerce.description',
   },
   {
     icon: '🔄',
-    title: 'Automação de Processos',
-    description:
-      'Identifico tarefas repetitivas na sua empresa e automatizo com scripts, bots ou agentes inteligentes, poupando horas de trabalho manual e reduzindo erros operacionais.',
+    titleKey: 'services.automation.title',
+    descriptionKey: 'services.automation.description',
   },
 ];
 
 export const Services: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="services" className="services section" aria-labelledby="services-title">
       <div className="section__container">
         <div className="section__header">
-          <p className="section__label">Serviços</p>
+          <p className="section__label">{t('services.label')}</p>
           <h2 id="services-title" className="section__title">
-            Como posso te ajudar
+            {t('services.title')}
           </h2>
           <p className="section__subtitle">
-            Soluções sob medida para transformar ideias em produtos reais, automatizar processos e
-            integrar inteligência artificial ao seu negócio.
+            {t('services.subtitle')}
           </p>
         </div>
 
         <div className="services__grid">
           {services.map((service) => (
-            <div key={service.title} className="service-card">
+            <div key={service.titleKey} className="service-card">
               <span className="service-card__icon" aria-hidden="true">
                 {service.icon}
               </span>
-              <h3 className="service-card__title">{service.title}</h3>
-              <p className="service-card__description">{service.description}</p>
+              <h3 className="service-card__title">{t(service.titleKey)}</h3>
+              <p className="service-card__description">{t(service.descriptionKey)}</p>
             </div>
           ))}
         </div>

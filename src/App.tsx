@@ -6,11 +6,12 @@ import { Career } from './components/sections/Career';
 import { Skills } from './components/sections/Skills';
 import { Services } from './components/sections/Services';
 import { Contact } from './components/sections/Contact';
+import { LanguageProvider } from './contexts/LanguageContext';
 import './App.css';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <main id="main-content">
         <Hero />
@@ -23,7 +24,7 @@ function App() {
           <Footer />
         </div>
       </main>
-    </>
+    </LanguageProvider>
   );
 }
 

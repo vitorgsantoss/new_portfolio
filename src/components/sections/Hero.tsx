@@ -1,17 +1,21 @@
-import { personalInfo } from '../../data/personal';
+import { getPersonalInfo } from '../../data/personal';
+import { useTranslation } from '../../hooks/useTranslation';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
+  const { t, language } = useTranslation();
+  const personalInfo = getPersonalInfo(language);
+
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="hero" className="hero" aria-label="Apresentação">
+    <section id="hero" className="hero" aria-label={t('hero.presentation')}>
       <div className="hero__container">
         <div className="hero__content">
-          <p className="hero__greeting">Olá, eu sou</p>
+          <p className="hero__greeting">{t('hero.greeting')}</p>
           <h1 className="hero__name">{personalInfo.name}</h1>
           <h2 className="hero__title">{personalInfo.title}</h2>
           <p className="hero__bio">{personalInfo.bio}</p>
@@ -22,15 +26,15 @@ export const Hero: React.FC = () => {
               className="hero__btn hero__btn--primary"
               onClick={(e) => handleScrollTo(e, '#projects')}
             >
-              Ver Projetos
+              {t('hero.viewProjects')}
             </a>
             <a
               href={personalInfo.resume}
               download="Vítor Santos-CV.pdf"
               className="hero__btn hero__btn--secondary"
-              aria-label="Baixar currículo"
+              aria-label={t('hero.downloadCV')}
             >
-              Download CV
+              {t('hero.downloadCV')}
             </a>
           </div>
 
@@ -89,7 +93,7 @@ export const Hero: React.FC = () => {
         href="#projects"
         className="hero__scroll-hint"
         onClick={(e) => handleScrollTo(e, '#projects')}
-        aria-label="Rolar para projetos"
+        aria-label={t('hero.scrollToProjects')}
       >
         <span className="hero__scroll-arrow" />
       </a>
