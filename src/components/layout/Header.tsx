@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../hooks/useTheme';
 import { useTranslation } from '../../hooks/useTranslation';
+import type { TranslationKey } from '../../data/translations';
 import './Header.css';
 import { personalInfo } from '../../data/personal';
 
-const getNavLinks = (t: (key: string) => string) => [
+const getNavLinks = (t: (key: TranslationKey) => string) => [
   { label: t('nav.projects'), href: '#projects' },
   { label: t('nav.career'), href: '#career' },
   { label: t('nav.skills'), href: '#skills' },
