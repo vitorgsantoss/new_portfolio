@@ -62,7 +62,6 @@ export const Header: React.FC = () => {
 
           <a
             href={personalInfo.resume}
-            download="Vitor Santos-CV.pdf"
             className="header__cta"
             aria-label={t('nav.downloadCV')}
           >

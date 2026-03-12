@@ -11,7 +11,7 @@ const personalInfoData: Record<Language, PersonalInfo> = {
     location: 'Brasil',
     linkedin: 'https://www.linkedin.com/in/vítor-santos-86142423b/',
     github: 'https://github.com/vitorgsantoss',
-    resume: '/cv.pdf',
+    resume: '/Vítor Santos.pdf',
   },
   'en-US': {
     name: 'Vítor Santos',
