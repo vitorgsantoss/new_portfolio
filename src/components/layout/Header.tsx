@@ -3,7 +3,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { useTranslation } from '../../hooks/useTranslation';
 import type { TranslationKey } from '../../data/translations';
 import './Header.css';
-import { personalInfo } from '../../data/personal';
+import { getPersonalInfo } from '../../data/personal';
 
 const getNavLinks = (t: (key: TranslationKey) => string) => [
   { label: t('nav.projects'), href: '#projects' },
@@ -18,6 +18,7 @@ export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggle: toggleTheme } = useTheme();
   const { language, toggle: toggleLanguage, t } = useTranslation();
+  const personalInfo = getPersonalInfo(language);
   const navLinks = getNavLinks(t);
 
   useEffect(() => {
@@ -46,6 +47,15 @@ export const Header: React.FC = () => {
         </a>
 
         <nav className={`header__nav${menuOpen ? ' header__nav--open' : ''}`} aria-label="Navegação principal">
+          <a
+            href="#hero"
+            className="header__logo header__nav-logo"
+            onClick={(e) => handleNavClick(e, '#hero')}
+            aria-label={t('nav.goToStart')}
+          >
+            <span className="header__logo-accent">Vgsantos.</span>dev
+          </a>
+
           <ul className="header__nav-list" role="list">
             {navLinks.map((link) => (
               <li key={link.href}>

@@ -5,66 +5,78 @@ const skillCategoriesData: Record<Language, SkillCategory[]> = {
   'pt-BR': [
     {
       id: 'ai',
-      name: 'IA & Machine Learning',
+      name: 'IA Generativa',
       icon: '🤖',
-      skills: ['Python', 'Langchain', 'OpenAI API', 'RAG', 'IA Generativa', 'Embeddings', 'ChromaDB', 'FAISS', 'Agentes de IA'],
+      skills: ['LangChain', 'RAG', 'Embeddings', 'Agentes de IA', 'Prompt Engineering', 'NLP', 'IA Generativa', 'ChromaDB', 'Vector Databases'],
+    },
+    {
+      id: 'data',
+      name: 'Dados',
+      icon: '📊',
+      skills: ['Pipelines de Dados (ETL)', 'Engenharia de Features', 'Análise Preditiva', 'Data Lake'],
     },
     {
       id: 'backend',
       name: 'Backend',
       icon: '⚙️',
-      skills: ['Django', 'DRF', 'FastAPI', 'Python', 'Celery', 'RabbitMQ', 'Node.js', 'Express', 'REST APIs', 'Poetry'],
+      skills: ['Python', 'Django', 'Django REST Framework', 'FastAPI', 'Celery', 'RabbitMQ', 'Mensageria', 'Node.js', 'Express', 'Poetry'],
     },
     {
       id: 'frontend',
       name: 'Frontend',
       icon: '🎨',
-      skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite', 'HTML5', 'CSS3', 'Streamlit', 'Django Templates'],
+      skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite', 'Streamlit', 'Django Templates', 'HTML5', 'CSS3'],
     },
     {
       id: 'databases',
       name: 'Banco de Dados',
       icon: '🗄️',
-      skills: ['PostgreSQL', 'Redis', 'MongoDB', 'SQLite', 'ORM', 'Sqlalchemy', 'SQL'],
+      skills: ['PostgreSQL', 'MongoDB', 'Redis', 'ChromaDB', 'SQLAlchemy', 'ORM'],
     },
     {
       id: 'devops',
-      name: 'DevOps & Ferramentas',
+      name: 'DevOps & Cloud',
       icon: '🛠️',
-      skills: ['Docker', 'Git', 'GitHub', 'Linux', 'GCP'],
-    },
+      skills: ['Docker', 'Google Cloud Platform (GCP)', 'Git', 'GitHub', 'Linux'],
+    }
   ],
   'en-US': [
     {
       id: 'ai',
-      name: 'AI & Machine Learning',
+      name: 'Generative AI',
       icon: '🤖',
-      skills: ['Python', 'Langchain', 'OpenAI API', 'RAG', 'Generative AI', 'Embeddings', 'ChromaDB', 'FAISS', 'AI Agents'],
+      skills: ['LangChain', 'RAG', 'Embeddings', 'AI Agents', 'Prompt Engineering', 'NLP', 'Generative AI', 'ChromaDB', 'Vector Databases'],
+    },
+    {
+      id: 'data',
+      name: 'Data',
+      icon: '📊',
+      skills: ['Data Pipelines (ETL)', 'Feature Engineering', 'Predictive Analysis', 'Data Lake'],
     },
     {
       id: 'backend',
       name: 'Backend',
       icon: '⚙️',
-      skills: ['Django', 'DRF', 'FastAPI', 'Python', 'Celery', 'RabbitMQ', 'Node.js', 'Express', 'REST APIs', 'Poetry'],
+      skills: ['Python', 'Django', 'Django REST Framework', 'FastAPI', 'Celery', 'RabbitMQ', 'Messaging', 'Node.js', 'Express', 'Poetry'],
     },
     {
       id: 'frontend',
       name: 'Frontend',
       icon: '🎨',
-      skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite', 'HTML5', 'CSS3', 'Streamlit', 'Django Templates'],
+      skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite', 'Streamlit', 'Django Templates', 'HTML5', 'CSS3'],
     },
     {
       id: 'databases',
       name: 'Databases',
       icon: '🗄️',
-      skills: ['PostgreSQL', 'Redis', 'MongoDB', 'SQLite', 'ORM', 'Sqlalchemy', 'SQL'],
+      skills: ['PostgreSQL', 'MongoDB', 'Redis', 'ChromaDB', 'SQLAlchemy', 'ORM'],
     },
     {
       id: 'devops',
-      name: 'DevOps & Tools',
+      name: 'DevOps & Cloud',
       icon: '🛠️',
-      skills: ['Docker', 'Git', 'GitHub', 'Linux', 'GCP'],
-    },
+      skills: ['Docker', 'Google Cloud Platform (GCP)', 'Git', 'GitHub', 'Linux'],
+    }
   ],
 };
 

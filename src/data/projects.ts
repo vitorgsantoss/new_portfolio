@@ -59,6 +59,7 @@ const projectsData: Record<Language, Project[]> = {
       technologies: ['React', 'TypeScript', 'Django REST Framework', 'Celery', 'RabbitMQ', 'PostgreSQL', 'Docker'],
       gradientFrom: '#8b5cf6',
       gradientTo: '#7c3aed',
+      imageUrl: '/img/isystems_pdv_cover.png',
       featured: false,
     },
     {
@@ -131,6 +132,7 @@ const projectsData: Record<Language, Project[]> = {
       technologies: ['React', 'TypeScript', 'Django REST Framework', 'Celery', 'RabbitMQ', 'PostgreSQL', 'Docker'],
       gradientFrom: '#8b5cf6',
       gradientTo: '#7c3aed',
+      imageUrl: '/img/isystems_pdv_cover.png',
       featured: false,
     },
     {

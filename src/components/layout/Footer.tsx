@@ -1,10 +1,11 @@
 import './Footer.css';
-import { personalInfo } from '../../data/personal';
+import { getPersonalInfo } from '../../data/personal';
 import { useTranslation } from '../../hooks/useTranslation';
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const personalInfo = getPersonalInfo(language);
 
   return (
     <footer className="footer">

@@ -1,10 +1,11 @@
-import { getExperiences } from '../../data/career';
+import { getExperiences, getEducation } from '../../data/career';
 import { useTranslation } from '../../hooks/useTranslation';
 import './Career.css';
 
 export const Career: React.FC = () => {
   const { t, language } = useTranslation();
   const experiences = getExperiences(language);
+  const education = getEducation(language);
 
   return (
     <section id="career" className="career section section--alt" aria-labelledby="career-title">
@@ -61,6 +62,24 @@ export const Career: React.FC = () => {
             </li>
           ))}
         </ol>
+
+        <div className="career__education">
+          <h3 className="career__education-title">{t('career.education')}</h3>
+          <ol className="education-list" aria-label={t('career.educationTimeline')}>
+            {education.map((edu) => (
+              <li key={edu.id} className="education-item">
+                <div className="education-item__icon" aria-hidden="true">🎓</div>
+                <div className="education-item__content">
+                  <h4 className="education-item__degree">{edu.degree}</h4>
+                  <p className="education-item__institution">{edu.institution}</p>
+                  <time className="education-item__period">
+                    {edu.period.start} — {edu.period.end}
+                  </time>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   );

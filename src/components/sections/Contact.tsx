@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import type { ContactFormData } from '../../types';
-import { personalInfo } from '../../data/personal';
+import { getPersonalInfo } from '../../data/personal';
 import { useTranslation } from '../../hooks/useTranslation';
 import './Contact.css';
 
@@ -13,7 +13,8 @@ export const Contact: React.FC = () => {
   const [form, setForm] = useState<ContactFormData>(initialForm);
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const personalInfo = getPersonalInfo(language);
 
   const validate = (): boolean => {
     const newErrors: Partial<ContactFormData> = {};

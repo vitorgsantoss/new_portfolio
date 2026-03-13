@@ -4,8 +4,8 @@ import type { Language } from '../hooks/useLanguage';
 const personalInfoData: Record<Language, PersonalInfo> = {
   'pt-BR': {
     name: 'Vítor Santos',
-    title: 'Desenvolvedor de Software',
-    bio: 'Olá, me chamo Vítor Santos! Sou Desenvolvedor de Software com experiência em desenvolvimento de sistemas web, automatização de processos, agentes de IA com RAG, ferramentas de busca SQL, aplicações desktop e APIs. Busco entregar sempre além do esperado nos projetos para os quais sou designado, melhorando ao máximo o desempenho utilizando tecnologias modernas.',
+    title: 'Full-Stack Developer & AI Engineer',
+    bio: 'Olá, me chamo Vítor Santos! Sou Desenvolvedor Full-Stack & AI Engineer com experiência em desenvolvimento de sistemas web, agentes de IA com LangChain, aplicações RAG, pipelines de dados (ETL), LLMs e automação de processos. Atuo com Python, Django, FastAPI, React e TypeScript, sempre buscando entregar além do esperado com tecnologias modernas.',
     email: 'vgsantos.dev@gmail.com',
     phone: '15 997592983',
     location: 'Brasil',
@@ -15,8 +15,8 @@ const personalInfoData: Record<Language, PersonalInfo> = {
   },
   'en-US': {
     name: 'Vítor Santos',
-    title: 'Software Developer',
-    bio: "Hi, I'm Vítor Santos! I'm a Software Developer with experience in web systems development, process automation, AI agents with RAG, SQL search tools, desktop applications and APIs. I always strive to deliver beyond expectations on the projects I'm assigned to, maximizing performance using modern technologies.",
+    title: 'Full-Stack Developer & AI Engineer',
+    bio: "Hi, I'm Vítor Santos! I'm a Full-Stack Developer & AI Engineer with experience in web systems development, AI agents with LangChain, RAG applications, data pipelines (ETL), LLMs and process automation. I work with Python, Django, FastAPI, React and TypeScript, always striving to deliver beyond expectations with modern technologies.",
     email: 'vgsantos.dev@gmail.com',
     phone: '+55 15 997592983',
     location: 'Brazil',

@@ -22,6 +22,13 @@ export interface Experience {
   location: string;
 }
 
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  period: { start: string; end: string };
+}
+
 export interface SkillCategory {
   id: string;
   name: string;

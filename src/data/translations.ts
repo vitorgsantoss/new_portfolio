@@ -45,6 +45,9 @@ export type TranslationKey =
   | 'career.timeline'
   | 'career.responsibilities'
   | 'career.technologies'
+  // Education
+  | 'career.education'
+  | 'career.educationTimeline'
   // Skills
   | 'skills.label'
   | 'skills.title'
@@ -147,6 +150,9 @@ export const translations: Record<Language, TranslationMap> = {
     'career.timeline': 'Linha do tempo da carreira',
     'career.responsibilities': 'Responsabilidades',
     'career.technologies': 'Tecnologias',
+    // Education
+    'career.education': 'Educação',
+    'career.educationTimeline': 'Linha do tempo da educação',
     // Skills
     'skills.label': 'Tecnologias',
     'skills.title': 'Habilidades',
@@ -161,7 +167,7 @@ export const translations: Record<Language, TranslationMap> = {
     'services.aiIntegration.title': 'Integração de IA em Sistemas',
     'services.aiIntegration.description': 'Integro modelos de linguagem (GPT, LLaMA, etc.) em sistemas existentes: chatbots, automação de processos, análise de dados e qualquer fluxo que possa se beneficiar de inteligência artificial.',
     'services.api.title': 'Criação de APIs',
-    'services.api.description': 'Desenvolvimento de APIs RESTful robustas e escaláveis com FastAPI ou Django REST Framework, desde microsserviços até backends completos com autenticação, documentação e testes.',
+    'services.api.description': 'Desenvolvimento de APIs REST robustas e escaláveis com FastAPI ou Django REST Framework, desde microsserviços até backends completos com autenticação, documentação e testes.',
     'services.websites.title': 'Criação de Sites',
     'services.websites.description': 'Sites modernos, responsivos e otimizados para SEO, com foco em desempenho e experiência do usuário. Do portfólio ao site institucional, sempre com as melhores tecnologias.',
     'services.ecommerce.title': 'E-commerces',
@@ -246,6 +252,9 @@ export const translations: Record<Language, TranslationMap> = {
     'career.timeline': 'Career timeline',
     'career.responsibilities': 'Responsibilities',
     'career.technologies': 'Technologies',
+    // Education
+    'career.education': 'Education',
+    'career.educationTimeline': 'Education timeline',
     // Skills
     'skills.label': 'Technologies',
     'skills.title': 'Skills',
@@ -260,7 +269,7 @@ export const translations: Record<Language, TranslationMap> = {
     'services.aiIntegration.title': 'AI Integration',
     'services.aiIntegration.description': 'I integrate language models (GPT, LLaMA, etc.) into existing systems: chatbots, process automation, data analysis, and any workflow that can benefit from AI.',
     'services.api.title': 'API Development',
-    'services.api.description': 'Development of robust and scalable RESTful APIs with FastAPI or Django REST Framework, from microservices to complete backends with authentication, documentation, and testing.',
+    'services.api.description': 'Development of robust and scalable REST APIs with FastAPI or Django REST Framework, from microservices to complete backends with authentication, documentation, and testing.',
     'services.websites.title': 'Website Development',
     'services.websites.description': 'Modern, responsive websites optimized for SEO, focused on performance and user experience. From portfolios to corporate sites, always with the best technologies.',
     'services.ecommerce.title': 'E-commerce',

@@ -30,12 +30,12 @@ export const Hero: React.FC = () => {
             </a>
             <a
               href={personalInfo.resume}
-              download="Vítor Santos-CV.pdf"
               className="hero__btn hero__btn--secondary"
               aria-label={t('hero.downloadCV')}
             >
               {t('hero.downloadCV')}
             </a>
+            
           </div>
 
           <div className="hero__socials">
@@ -74,14 +74,18 @@ export const Hero: React.FC = () => {
             </div>
             <pre className="hero__code-body"><code>{`const developer = {
   name: "Vítor Santos",
-  role: "Fullstack Dev",
+  role: "Full-Stack & AI Eng",
   stack: [
-    "Python", "Langchain",
+    "Python", "LangChain",
     "FastAPI", "Django",
     "Celery", "RabbitMQ",
     "React", "TypeScript",
     "Node.js", "PostgreSQL",
     "Docker", "GCP"
+  ],
+  ai: [
+    "RAG", "AI Agents",
+    "LLMs", "NLP"
   ],
   available: true,
 };`}</code></pre>

@@ -60,30 +60,34 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           ))}
         </ul>
 
-        <div className="project-card__links">
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card__link project-card__link--demo"
-              aria-label={`${t('projects.viewDemo')} ${project.title}`}
-            >
-              {t('projects.liveDemo')} ↗
-            </a>
-          )}
-          {project.repoUrl && (
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card__link project-card__link--repo"
-              aria-label={`${t('projects.viewRepo')} ${project.title}`}
-            >
-              GitHub ↗
-            </a>
-          )}
-        </div>
+        {(project.demoUrl || project.repoUrl) ? (
+          <div className="project-card__links project-card__links--has-content">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card__link project-card__link--demo"
+                aria-label={`${t('projects.viewDemo')} ${project.title}`}
+              >
+                {t('projects.liveDemo')} ↗
+              </a>
+            )}
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card__link project-card__link--repo"
+                aria-label={`${t('projects.viewRepo')} ${project.title}`}
+              >
+                GitHub ↗
+              </a>
+            )}
+          </div>
+        ) : (
+          <div className="project-card__links" />
+        )}
       </div>
     </article>
   );
